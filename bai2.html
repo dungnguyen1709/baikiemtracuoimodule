@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr,index) {
+      if (index >= 0 && index < arr.length) {
+          for (i = index; i < arr.length; i++) {
+              arr[i] = arr[i + 1];
+          }
+          arr.length--;
+      }
+      return arr;
+    }
+    let arr1 = [12,6,3,7,21,5,7];
+    let arr2 = [12,6,3,7,21,5,7];
+    let arr3 = [12,6,3,7,21,5,7];
+    let arr4 = [12,6,4,7,21,5,7];
+    document.write(tryRemoveFromArray(arr1,2) + '<br/>');
+    document.write(tryRemoveFromArray(arr2,0) + '<br/>');
+    document.write(tryRemoveFromArray(arr3,7) + '<br/>');
+    document.write(tryRemoveFromArray(arr4,-2) + '<br/>');
+</script>
+</body>
+</html>
